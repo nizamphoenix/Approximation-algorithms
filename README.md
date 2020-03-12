@@ -1,2 +1,2 @@
-# Approximation-algorithms
-A repository of approximation algorithms in R 
+# Algorithms in R
+A repository of algorithms in R like EM,metropolis,metroplois-hastiings,gibbs,variational bayes. 
