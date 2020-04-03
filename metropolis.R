@@ -1,3 +1,4 @@
+Metropolis.fn<-function(y,n,X,c,Sigma,iter,burnin,chain){ 
 #Inputs:
 #y: vector of responses
 #n: vector (or scalar) of trial sizes. 
@@ -5,10 +6,6 @@
 #c: rescaling for variance-covariance matrix, scalar J(theta*|theta(t-1)) = N(theta(t-1), c^2*Sigma)
 #iter: number of iterations
 #burnin: number of initial iterations to throw out.
-
-
-
-Metropolis.fn<-function(y,n,X,c,Sigma,iter,burnin,chain){ 
 
 ar=0#acceptance rate
 p <-dim(X)[2]   #number of parameters
@@ -24,9 +21,9 @@ lambda.c   <-exp(xbc)
 xb         <-X%*%theta.sim[i,]
 lambda.b   <-exp(xb)
 #difference of log joint distributions.
-r<-exp(sum(dpois(y,lambda = lambda.c,log=TRUE))-sum(dpois(y,lambda=lambda.b,log=TRUE)))
+r <- exp(sum(dpois(y,lambda = lambda.c,log=TRUE)) - sum(dpois(y,lambda=lambda.b,log=TRUE)))
 #Draw an indicator whether to accept/reject candidate
-ind<-min(r,1)
+ind <- min(r,1)
 if(ind==1){
   ar=ar+1
   }
