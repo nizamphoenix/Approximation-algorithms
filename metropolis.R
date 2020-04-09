@@ -9,7 +9,7 @@ Metropolis.fn<-function(y,n,X,c,Sigma,iter,burnin,chain){
 
 ar=0#acceptance rate
 p <-dim(X)[2]   #number of parameters
-library(mvtnorm)
+library(mvtnorm)#library for multivariate gaussian, used for sampling
 theta0<-rnorm(p) #initial values.
 theta.sim<-matrix(0,iter,p) #matrix to store iterations
 theta.sim[1,]<-theta0   
