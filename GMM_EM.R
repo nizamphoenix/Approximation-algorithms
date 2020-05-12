@@ -26,6 +26,8 @@ lambda.vec[i] <- sum(identity==i)/length(identity)
 res<-data.frame(mean=mu.vec,sd=sd.vec,lambda=lambda.vec)
 return(res)
 }
+
+
 #Step2): Expect-Maximize
 expect.maximize.GMM<-function(x,lambda.vec.init,mu.vec,sd.vec,epsilon){
 k <- length(mu.vec)
