@@ -1,2 +1,6 @@
-# Computational Algorithms in R
-A repository of computational algorithms in R like EM,metropolis,metroplois-hastiings,gibbs,variational bayes. 
+# Computational Algorithms in R  
+- [x] Expectation Maximization  
+- [x] Metropolis  
+- [x] Metropolis-hastings  
+- [x] Gibbs sampler  
+- [x] Variational Bayes  
